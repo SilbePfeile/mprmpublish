@@ -1,29 +1,29 @@
-aurpublish(1)
+mprpublish(1)
 =============
 
 Name
 ----
-aurpublish - PKGBUILD management framework for the Arch User Repository
+mprpublish - PKGBUILD management framework for the Makedeb Package Repository
 
 
 Synopsis
 --------
-'aurpublish' [options] PACKAGE
+'mprpublish' [options] PACKAGE
 
-'aurpublish' log [<options>] PACKAGE
+'mprpublish' log [<options>] PACKAGE
 
-'aurpublish' setup
+'mprpublish' setup
 
 
 Description
 -----------
-Aurpublish is an utility which helps maintainers of aur packages to submit updates.
+Mprpublish is an utility which helps maintainers of mpr packages to submit updates.
 
 
 How it works
 ------------
 Commit PKGBUILDs in named subdirectories.
-Export them to the AUR with the aurpublish command, using the subtree push
+Export them to the MPR with the mprpublish command, using the subtree push
 stratagem. This preserves an independent history for third-party hosting,
 pull requests... ;)
 
@@ -40,7 +40,7 @@ Options
 -------
 
 *-p* <PACKAGE>::
-        Instead of publishing, pull changes from the AUR.
+        Instead of publishing, pull changes from the MPR.
         Can import packages into a new subtree.
 
 *-s*, *--speedup* <PACKAGE>::
@@ -66,20 +66,22 @@ Hooks
 Examples
 --------
 
-aurpublish setup::
+mprpublish setup::
         Initialize a new repository with git hooks. Refer to Hooks section
         for more info.
 
-aurpublish -p ansible-core-git::
-        Clone existing package from aur and add its url as a git subtree to
+mprpublish -p ansible-core-git::
+        Clone existing package from mpr and add its url as a git subtree to
         the currently existing git repository.
 
-aurpublish ansible-core-git::
-        Push an existing subtree to AUR.
+mprpublish ansible-core-git::
+        Push an existing subtree to MPR.
 
-aurpublish log::
+mprpublish log::
         View the git log of a package subtree.
 
 AUTHORS
 -------
 Eli Schwartz <eschwartz@archlinux.org>
+
+canony <canony@protonmail.ch>

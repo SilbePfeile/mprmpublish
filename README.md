@@ -1,26 +1,26 @@
-# PKGBUILD management framework for the [Arch User Repository](https://aur.archlinux.org)
+# PKGBUILD management framework for the [Makedeb Package Repository](https://mpr.hunterwittenborn.com)
 
 ## Install
 The standard `make && sudo make install` routine is used. The following additional variables are supported:
 * `DESTDIR` -- staged installs for distro packaging
 * `PREFIX` -- where to install generated script, defaults to /usr/local
-* `HOOKSDIR` -- where to install [githooks](#hooks), defaults to `<PREFIX>/share/aurpublish`
+* `HOOKSDIR` -- where to install [githooks](#hooks), defaults to `<PREFIX>/share/mprpublish`
 
 ## How it works
-Commit PKGBUILDs in named subdirectories. Export them to the AUR with the `aurpublish` command, using the subtree push stratagem.
+Commit PKGBUILDs in named subdirectories. Export them to the MPR with the `mprpublish` command, using the subtree push stratagem.
 This preserves an independent history for third-party hosting, pull requests... ;)
 
 ## Commands
-* `aurpublish setup`
+* `mprpublish setup`
 > Initialize a new repository with [githooks](#hooks).
 
-* `aurpublish PACKAGE`
-> Push PACKAGE to the AUR. With "--speedup", merges the split history back in.
+* `mprpublish PACKAGE`
+> Push PACKAGE to the MPR. With "--speedup", merges the split history back in.
 
-* `aurpublish -p PACKAGE`
-> Pull package from the AUR (if you adopted an existing package, or have a co-maintainer).
+* `mprpublish -p PACKAGE`
+> Pull package from the MPR (if you adopted an existing package, or have a co-maintainer).
 
-* `aurpublish log PACKAGE`
+* `mprpublish log PACKAGE`
 > View the git log of a package subtree.
 
 * `import-from-aur3.sh PACKAGE`

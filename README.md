@@ -1,4 +1,4 @@
-# PKGBUILD management framework for the [Makedeb Package Repository](https://mpr.makedeb.com)
+# PKGBUILD management framework for the [Makedeb Package Repository](https://mpr.makedeb.org)
 
 ## Install
 The standard `make && sudo make install` routine is used. The following additional variables are supported:

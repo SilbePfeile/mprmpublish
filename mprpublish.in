@@ -35,9 +35,9 @@ usage() {
 ssh_config() {
 	cat <<-_EOF_
 		\`\`\`
-		Host MPR mpr.makedeb.com
+		Host MPR mpr.makedeb.org
 		    User mpr
-		    Hostname mpr.makedeb.com
+		    Hostname mpr.makedeb.org
 		    IdentityFile ~/.ssh/keys/mpr
 		\`\`\`
 	_EOF_
